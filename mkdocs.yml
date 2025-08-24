@@ -1,4 +1,4 @@
-site_name: Plantilla para Documentación
+site_name: Documentación Unversitaria
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -40,12 +40,5 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Guía de Usuario:
-      - Introducción: guia_usuario/introduccion.md
-      - Instalación: guia_usuario/instalacion.md
-      - Uso Básico: guia_usuario/uso_basico.md
-  - Guía de Desarrollador:
-      - Arquitectura: guia_desarrollador/arquitectura.md
-      - API: guia_desarrollador/api.md
-  - FAQ: faq.md
-  - Acerca de: acerca_de.md
+  - Materias 5to semestre:
+    - Sistemas embebidos: Sistemas_embebidos.md
