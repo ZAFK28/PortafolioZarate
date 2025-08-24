@@ -40,5 +40,5 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Materias 5to semestre:
+  - Materias 5to semestre: 
     - Sistemas embebidos: Sistemas_embebidos.md
