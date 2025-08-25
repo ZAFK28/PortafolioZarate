@@ -5,62 +5,47 @@
 ## Comparacion de sistemas embebidos para el desarrollo de una consola Gameboy:
 ### 1. ESP32 / ESP32-S3
 
-Precio: muy barato (5–15 USD).
+- Precio: muy barato (5–15 USD).
 
-Pros:
+- Pros:
+    * Bajo consumo, perfecto para portátil con batería.
+    * Soporta emulación NES, Game Boy, Game Boy Color, Master System sin problemas.
+    * Muchísimos proyectos DIY en GitHub (ej. Odroid-Go, ESP32 Game Boy clones).
 
-Bajo consumo, perfecto para portátil con batería.
+- Contras:
+    * No suficiente potencia para SNES fluido o PS1.
 
-Soporta emulación NES, Game Boy, Game Boy Color, Master System sin problemas.
-
-Muchísimos proyectos DIY en GitHub (ej. Odroid-Go, ESP32 Game Boy clones).
-
-Contras:
-
-No suficiente potencia para SNES fluido o PS1.
-
-Ideal si quieres algo muy simple estilo Game Boy Classic o NES portátil.
+- Ideal si quieres algo muy simple estilo Game Boy Classic o NES portátil.
 
 ### 2. Odroid-Go Advance (basado en Rockchip RK3326)
 
-Precio: unos 60–80 USD con kit completo.
-
-Pros:
-
-Mucho más potente que un ESP32.
-
-Corre SNES, GBA, PS1 e incluso algo de N64 y PSP ligero.
-
-Pantalla, botones y batería ya integrados (como una consola portátil DIY).
-
-Contras:
-
-No tan barato como un ESP32.
-
-Menos comunidad que Raspberry.
-
-Ideal si quieres calidad/precio para algo ya más completo.
+- Precio: unos 60–80 USD con kit completo.
+- Pros:
+    * Mucho más potente que un ESP32.
+    * Corre SNES, GBA, PS1 e incluso algo de N64 y PSP ligero.
+    * Pantalla, botones y batería ya integrados (como una consola portátil DIY).
+- Contras:
+    * No tan barato como un ESP32.
+    * Menos comunidad que Raspberry.
+- Ideal si quieres calidad/precio para algo ya más completo.
 
 ### 3. Anbernic / Powkiddy (consolas chinas retro listas)
 
-Usan SoCs tipo Allwinner, Rockchip o Ingenic.
-Precio: 50–120 USD.
+- Usan SoCs tipo Allwinner, Rockchip o Ingenic.
+- Precio: 50–120 USD.
 - Pros:
     * Ya vienen listas (pantalla, batería, controles).
     * Emulan de NES hasta PS1, Dreamcast y PSP según modelo.
     * Calidad/precio insuperable si no quieres “soldar y programar”.
-Contras: No es DIY (menos divertido para fabricar uno mismo).
-Ejemplos buenos: RG35XX Plus, Miyoo Mini Plus, RG353V.
+- Contras: No es DIY.
+- Ejemplos buenos: RG35XX Plus, Miyoo Mini Plus, RG353V.
 
 ### 4. Compute Modules / SBC alternativos
 
-Banana Pi, Orange Pi, Rock Pi, Radxa.
-
-Pros: similares a Raspberry Pi, a veces más potentes y más baratos.
-
-Contras: menos documentación y comunidad.
-
-Útiles si quieres un “mini-PC” emulador sin pagar sobreprecio de Raspberry.
+- Banana Pi, Orange Pi, Rock Pi, Radxa.
+- Pros: similares a Raspberry Pi, a veces más potentes y más baratos.
+- Contras: menos documentación y comunidad.
+- Útiles si quieres un “mini-PC” emulador sin pagar sobreprecio de Raspberry.
 
 ### Tabla Comparativa
 | Plataforma / Chip                         | CPU                      | Velocidad (GHz)  | RAM                                            | Almacenamiento | Rendimiento en emulación                             |
