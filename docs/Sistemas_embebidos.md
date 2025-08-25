@@ -44,21 +44,12 @@ Ideal si quieres calidad/precio para algo ya más completo.
 ### 3. Anbernic / Powkiddy (consolas chinas retro listas)
 
 Usan SoCs tipo Allwinner, Rockchip o Ingenic.
-
 Precio: 50–120 USD.
-
-Pros:
-
-Ya vienen listas (pantalla, batería, controles).
-
-Emulan de NES hasta PS1, Dreamcast y PSP según modelo.
-
-Calidad/precio insuperable si no quieres “soldar y programar”.
-
-Contras:
-
-No es DIY (menos divertido para fabricar uno mismo).
-
+- Pros:
+    * Ya vienen listas (pantalla, batería, controles).
+    * Emulan de NES hasta PS1, Dreamcast y PSP según modelo.
+    * Calidad/precio insuperable si no quieres “soldar y programar”.
+Contras: No es DIY (menos divertido para fabricar uno mismo).
 Ejemplos buenos: RG35XX Plus, Miyoo Mini Plus, RG353V.
 
 ### 4. Compute Modules / SBC alternativos
