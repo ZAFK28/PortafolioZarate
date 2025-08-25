@@ -60,3 +60,5 @@ Precio: unos 60–80 USD con kit completo.
 | **Raspberry Pi 4B**                       | Quad-core ARM Cortex-A72 | 1.5–1.8 GHz (OC) | 2–8 GB LPDDR4                                  | MicroSD / SSD  | SNES, GBA, PS1 perfecto; N64 y PSP jugable (no todo) |
 | **Odroid-Go Advance (RK3326)**            | Quad-core ARM Cortex-A35 | 1.3 GHz          | 1 GB LPDDR3                                    | MicroSD        | NES→PS1 muy bien; N64 y PSP con límites              |
 | **Anbernic RG35XX Plus (Allwinner H700)** | Quad-core Cortex-A53     | 1.5 GHz          | 1 GB LPDDR4                                    | MicroSD        | NES→PS1 perfecto; GBA excelente; N64 parcial         |
+
+---

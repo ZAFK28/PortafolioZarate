@@ -3,9 +3,4 @@
 ---
 
 ## Descripcion:
-
-1. **Edita el nombre del sitio** en `mkdocs.yml`:
-   ```yaml
-   site_name: Documentación del Curso
-   theme:
-     name: material
+En esta pagina documente todos los proyectos y trabajos relevantes de mi vida universitaria
