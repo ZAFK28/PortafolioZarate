@@ -42,5 +42,5 @@ nav:
   - Home: index.md
   - Materias 5to semestre: 
       - Sistemas embebidos: 
-        -Comparacion de sistemas embebidos: Compacion_de_sistemas_embebidos.md
-        -Practicas Raspberry Pi Pico 2: Practicas_Raspberry_Pi_Pico_2.md
+        - Comparacion de sistemas embebidos: Compacion_de_sistemas_embebidos.md
+        - Practicas Raspberry Pi Pico 2: Practicas_Raspberry_Pi_Pico_2.md
