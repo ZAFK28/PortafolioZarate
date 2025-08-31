@@ -34,7 +34,7 @@ Programar la secuencia de código Gray en 4 bits.
 
 ## 3) Alcance y Exclusiones
 
-- ### Incluye:
+### Incluye:
 
     * Código en MicroPython para los tres ejercicios.
 
@@ -42,7 +42,7 @@ Programar la secuencia de código Gray en 4 bits.
 
     * Documentación en Markdown para integrar en página o repositorio.
 
-- ### No incluye:
+### No incluye:
 
     * Variantes en otros lenguajes (C, C++).
 
@@ -52,20 +52,20 @@ Programar la secuencia de código Gray en 4 bits.
 
 ## 4) Requisitos
 
-Software:
+### Software:
 
-Thonny IDE o uPyCraft.
+    * Thonny IDE o uPyCraft.
 
-Firmware MicroPython en Raspberry Pi Pico 2.
+    * Firmware MicroPython en Raspberry Pi Pico 2.
 
-Hardware
+### Hardware
 
-Componente	Cant.	Nota
-Raspberry Pi Pico 2	1	MCU principal
-LED rojo	5	Para los ejercicios
-Resistencias 330 Ω	5	Limitadoras de corriente
-Protoboard	1	Conexión rápida
-Cables Dupont	Varios	Macho–macho
+Componente	| Cant.	| Nota
+Raspberry Pi Pico 2	| 1	|MCU principal
+LED rojo | 	5   |Para los ejercicios
+Resistencias 1 kΩ|	5|	Limitadoras de corriente
+Protoboard	|1|	Conexión rápida
+Cables Dupont	|Varios	|Macho–macho
 
 Conocimientos previos
 
@@ -76,10 +76,10 @@ Uso de máscaras binarias.
 Programación básica en MicroPython.
 ## 5) Desarrollo
 
-### 1. Contador binario de 4 bits
+### 5.1  Contador binario de 4 bits
 
 ---
-### 2. Barrido leds
+### 5.2 Barrido leds
 
 ---
-### 3. Secuencia en codigo Gray
+### 5.3 Secuencia en codigo Gray
