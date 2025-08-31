@@ -43,4 +43,5 @@ nav:
   - Materias 5to semestre: 
       - Sistemas embebidos: 
         - Comparacion de sistemas embebidos: Comparacion_de_sistemas_embebidos.md
-        - Practicas Raspberry Pi Pico 2: Practicas_Raspberry_Pi_Pico_2.md
+        - Practicas Raspberry Pi Pico 2:
+          - Outputs basicos: Practica1_Outputs_basicos.md
