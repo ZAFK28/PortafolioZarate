@@ -75,7 +75,7 @@ Antirrebote por software (detección de flanco).
 Programación básica en MicroPython.
 
 ## 5) Desarrollo
-5.1 Compuertas básicas AND / OR / XOR con 2 botones
+### 5.1 Compuertas básicas AND / OR / XOR con 2 botones
 
 Entradas: Botones A y B, configurados con pull-up (reposo=1, presionado=0).
 
@@ -88,8 +88,9 @@ LED2 = A OR B
 LED3 = A XOR B
 
 Demostración en video: Se deben probar las 4 combinaciones de entradas: (00, 01, 10, 11).
-
-5.2 Selector cíclico de 4 LEDs con avance/retroceso
+#### Video
+[Enlace directo](https://youtube.com/shorts/Svp_Ctx2cuk?si=vYLxuer2qodYCQAW)
+### 5.2 Selector cíclico de 4 LEDs con avance/retroceso
 
 Entradas:
 
@@ -102,3 +103,5 @@ Salida: Solo un LED encendido a la vez entre LED0..LED3.
 Condición: Cada pulsación cuenta solo una vez (antirrebote por flanco). Mantener presionado no genera múltiples avances.
 
 Demostración en video: Se recorre en ambos sentidos mostrando el funcionamiento correcto.
+#### Video
+[Enlace directo](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
