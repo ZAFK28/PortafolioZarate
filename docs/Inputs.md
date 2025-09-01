@@ -89,7 +89,7 @@ LED3 = A XOR B
 
 Demostración en video: Se deben probar las 4 combinaciones de entradas: (00, 01, 10, 11).
 #### Video
-[Enlace directo](https://youtube.com/shorts/Svp_Ctx2cuk?si=vYLxuer2qodYCQAW)
+[Video Compuertas AND / OR / XOR](https://youtube.com/shorts/Svp_Ctx2cuk?si=vYLxuer2qodYCQAW)
 ### 5.2 Selector cíclico de 4 LEDs con avance/retroceso
 
 Entradas:
@@ -104,4 +104,4 @@ Condición: Cada pulsación cuenta solo una vez (antirrebote por flanco). Manten
 
 Demostración en video: Se recorre en ambos sentidos mostrando el funcionamiento correcto.
 #### Video
-[Enlace directo](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
+[Video Selector Ciclico](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
