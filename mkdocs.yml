@@ -45,3 +45,4 @@ nav:
         - Comparacion de sistemas embebidos: Comparacion_de_sistemas_embebidos.md
         - Practicas Raspberry Pi Pico 2:
           - Outputs basicos: Practica1_Outputs_basicos.md
+          - Inputs: Inputs.md
