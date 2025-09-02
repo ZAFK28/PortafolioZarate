@@ -89,7 +89,7 @@ LED3 = A XOR B
 
 Demostración en video: Se deben probar las 4 combinaciones de entradas: (00, 01, 10, 11).
 #### Esquematico
-<img src="../recursos/imgs/Esquematicocamino.jpeg" alt="Diagrama del sistema" width="420">
+<img src="../recursos/imgs/Esquematicocamino.png" alt="Diagrama del sistema" width="420">
 #### Codigo
 ``` codigo
 #include <stdio.h>
