@@ -88,6 +88,139 @@ LED2 = A OR B
 LED3 = A XOR B
 
 Demostración en video: Se deben probar las 4 combinaciones de entradas: (00, 01, 10, 11).
+``` codigo
+#include <stdio.h>
+#include "pico/stdlib.h"
+#include "hardware/timer.h"
+#include "hardware/gpio.h"
+
+// Pines de LEDs de la cancha
+#define LED0 9
+#define LED1 10
+#define LED2 11
+#define LED3 12
+#define LED4 13
+
+// LEDs de puntuación
+#define LED_SCORE_P1 7
+#define LED_SCORE_P2 8
+
+// Botones
+#define BTN_P1 14
+#define BTN_P2 15
+
+// Variables del juego
+volatile int pelota_pos = 2;       // posición inicial (LED del centro)
+volatile int direccion = 1;        // 1 → derecha, -1 → izquierda
+volatile bool esperando_respuesta = false;
+
+// Prototipos
+bool mover_pelota(struct repeating_timer *t);
+void actualizar_leds();
+void btn_callback(uint gpio, uint32_t events);
+
+int main() {
+    stdio_init_all();
+
+    // Configuración LEDs
+    int leds[] = {LED0, LED1, LED2, LED3, LED4, LED_SCORE_P1, LED_SCORE_P2};
+    for (int i = 0; i < 7; i++) {
+        gpio_init(leds[i]);
+        gpio_set_dir(leds[i], true);
+        gpio_put(leds[i], 0);
+    }
+
+    // Configuración botones
+    // Configuración botón jugador 1
+gpio_init(BTN_P1);
+gpio_set_dir(BTN_P1, false);
+gpio_pull_up(BTN_P1);
+
+// Configuración botón jugador 2
+gpio_init(BTN_P2);
+gpio_set_dir(BTN_P2, false);
+gpio_pull_up(BTN_P2);
+
+// Registrar el callback global UNA sola vez
+gpio_set_irq_enabled_with_callback(BTN_P1, 0x8u, true, &btn_callback);
+
+// Habilitar interrupción también en el otro botón, sin registrar callback otra vez
+gpio_set_irq_enabled(BTN_P2, 0x8u, true);
+
+
+    // Timer para mover la pelota
+    struct repeating_timer timer;
+    add_repeating_timer_ms(500, mover_pelota, NULL, &timer);
+
+    while (true) {
+        tight_loop_contents(); // loop vacío, todo se maneja con interrupciones y timer
+    }
+}
+
+// Timer: mueve la pelota
+bool mover_pelota(struct repeating_timer *t) {
+    if (esperando_respuesta) return true; // espera al jugador
+
+    // Apagar LEDs
+    for (int i = LED0; i <= LED4; i++) gpio_put(i, 0);
+
+    // Mover pelota
+    pelota_pos += direccion;
+
+    // Revisar si llegó al extremo
+    if (pelota_pos <= 0) {
+        esperando_respuesta = true; // espera botón del jugador 1
+        pelota_pos = 0;
+    } else if (pelota_pos >= 4) {
+        esperando_respuesta = true; // espera botón del jugador 2
+        pelota_pos = 4;
+    }
+
+    actualizar_leds();
+    return true;
+}
+
+// Encender LED de la pelota
+void actualizar_leds() {
+    gpio_put(LED0, pelota_pos == 0);
+    gpio_put(LED1, pelota_pos == 1);
+    gpio_put(LED2, pelota_pos == 2);
+    gpio_put(LED3, pelota_pos == 3);
+    gpio_put(LED4, pelota_pos == 4);
+}
+
+// Callback de botones (interrupciones)
+void btn_callback(uint gpio, uint32_t events) {
+    if (!esperando_respuesta) return;
+
+    if (gpio == BTN_P1 && pelota_pos == 0) {
+        direccion = 1; // devuelve hacia la derecha
+        esperando_respuesta = false;
+    } 
+    else if (gpio == BTN_P2 && pelota_pos == 4) {
+        direccion = -1; // devuelve hacia la izquierda
+        esperando_respuesta = false;
+    } 
+    else {
+        // Falló → punto para el contrario
+        if (gpio == BTN_P1) {
+            gpio_put(LED_SCORE_P2, 1);
+            sleep_ms(500);
+            gpio_put(LED_SCORE_P2, 0);
+        } else {
+            gpio_put(LED_SCORE_P1, 1);
+            sleep_ms(500);
+            gpio_put(LED_SCORE_P1, 0);
+        }
+        // Reiniciar pelota
+        pelota_pos = 2;
+        direccion = (gpio == BTN_P1) ? 1 : -1;
+        esperando_respuesta = false;
+    }
+    actualizar_leds();
+}
+
+``` 
 #### Video
 [Video Compuertas AND / OR / XOR](https://youtube.com/shorts/Svp_Ctx2cuk?si=vYLxuer2qodYCQAW)
 ### 5.2 Selector cíclico de 4 LEDs con avance/retroceso
@@ -103,5 +236,138 @@ Salida: Solo un LED encendido a la vez entre LED0..LED3.
 Condición: Cada pulsación cuenta solo una vez (antirrebote por flanco). Mantener presionado no genera múltiples avances.
 
 Demostración en video: Se recorre en ambos sentidos mostrando el funcionamiento correcto.
+``` codigo
+#include <stdio.h>
+#include "pico/stdlib.h"
+#include "hardware/timer.h"
+#include "hardware/gpio.h"
+
+// Pines de LEDs de la cancha
+#define LED0 9
+#define LED1 10
+#define LED2 11
+#define LED3 12
+#define LED4 13
+
+// LEDs de puntuación
+#define LED_SCORE_P1 7
+#define LED_SCORE_P2 8
+
+// Botones
+#define BTN_P1 14
+#define BTN_P2 15
+
+// Variables del juego
+volatile int pelota_pos = 2;       // posición inicial (LED del centro)
+volatile int direccion = 1;        // 1 → derecha, -1 → izquierda
+volatile bool esperando_respuesta = false;
+
+// Prototipos
+bool mover_pelota(struct repeating_timer *t);
+void actualizar_leds();
+void btn_callback(uint gpio, uint32_t events);
+
+int main() {
+    stdio_init_all();
+
+    // Configuración LEDs
+    int leds[] = {LED0, LED1, LED2, LED3, LED4, LED_SCORE_P1, LED_SCORE_P2};
+    for (int i = 0; i < 7; i++) {
+        gpio_init(leds[i]);
+        gpio_set_dir(leds[i], true);
+        gpio_put(leds[i], 0);
+    }
+
+    // Configuración botones
+    // Configuración botón jugador 1
+gpio_init(BTN_P1);
+gpio_set_dir(BTN_P1, false);
+gpio_pull_up(BTN_P1);
+
+// Configuración botón jugador 2
+gpio_init(BTN_P2);
+gpio_set_dir(BTN_P2, false);
+gpio_pull_up(BTN_P2);
+
+// Registrar el callback global UNA sola vez
+gpio_set_irq_enabled_with_callback(BTN_P1, 0x8u, true, &btn_callback);
+
+// Habilitar interrupción también en el otro botón, sin registrar callback otra vez
+gpio_set_irq_enabled(BTN_P2, 0x8u, true);
+
+
+    // Timer para mover la pelota
+    struct repeating_timer timer;
+    add_repeating_timer_ms(500, mover_pelota, NULL, &timer);
+
+    while (true) {
+        tight_loop_contents(); // loop vacío, todo se maneja con interrupciones y timer
+    }
+}
+
+// Timer: mueve la pelota
+bool mover_pelota(struct repeating_timer *t) {
+    if (esperando_respuesta) return true; // espera al jugador
+
+    // Apagar LEDs
+    for (int i = LED0; i <= LED4; i++) gpio_put(i, 0);
+
+    // Mover pelota
+    pelota_pos += direccion;
+
+    // Revisar si llegó al extremo
+    if (pelota_pos <= 0) {
+        esperando_respuesta = true; // espera botón del jugador 1
+        pelota_pos = 0;
+    } else if (pelota_pos >= 4) {
+        esperando_respuesta = true; // espera botón del jugador 2
+        pelota_pos = 4;
+    }
+
+    actualizar_leds();
+    return true;
+}
+
+// Encender LED de la pelota
+void actualizar_leds() {
+    gpio_put(LED0, pelota_pos == 0);
+    gpio_put(LED1, pelota_pos == 1);
+    gpio_put(LED2, pelota_pos == 2);
+    gpio_put(LED3, pelota_pos == 3);
+    gpio_put(LED4, pelota_pos == 4);
+}
+
+// Callback de botones (interrupciones)
+void btn_callback(uint gpio, uint32_t events) {
+    if (!esperando_respuesta) return;
+
+    if (gpio == BTN_P1 && pelota_pos == 0) {
+        direccion = 1; // devuelve hacia la derecha
+        esperando_respuesta = false;
+    } 
+    else if (gpio == BTN_P2 && pelota_pos == 4) {
+        direccion = -1; // devuelve hacia la izquierda
+        esperando_respuesta = false;
+    } 
+    else {
+        // Falló → punto para el contrario
+        if (gpio == BTN_P1) {
+            gpio_put(LED_SCORE_P2, 1);
+            sleep_ms(500);
+            gpio_put(LED_SCORE_P2, 0);
+        } else {
+            gpio_put(LED_SCORE_P1, 1);
+            sleep_ms(500);
+            gpio_put(LED_SCORE_P1, 0);
+        }
+        // Reiniciar pelota
+        pelota_pos = 2;
+        direccion = (gpio == BTN_P1) ? 1 : -1;
+        esperando_respuesta = false;
+    }
+    actualizar_leds();
+}
+
+```
 #### Video
 [Video Selector Ciclico](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
