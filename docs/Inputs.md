@@ -88,6 +88,9 @@ LED2 = A OR B
 LED3 = A XOR B
 
 Demostración en video: Se deben probar las 4 combinaciones de entradas: (00, 01, 10, 11).
+#### Esquematico
+<img src="../recursos/imgs/Esquematicocamino.jpeg" alt="Diagrama del sistema" width="420">
+#### Codigo
 ``` codigo
 #include <stdio.h>
 #include "pico/stdlib.h"
@@ -236,6 +239,7 @@ Salida: Solo un LED encendido a la vez entre LED0..LED3.
 Condición: Cada pulsación cuenta solo una vez (antirrebote por flanco). Mantener presionado no genera múltiples avances.
 
 Demostración en video: Se recorre en ambos sentidos mostrando el funcionamiento correcto.
+#### Codigo
 ``` codigo
 #include <stdio.h>
 #include "pico/stdlib.h"
