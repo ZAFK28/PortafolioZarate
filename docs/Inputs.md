@@ -3,11 +3,11 @@
 
 Nombre del proyecto: Prácticas de Compuertas Lógicas y Secuencias con Raspberry Pi Pico 2
 
-Equipo / Autor(es): Nombre del estudiante / grupo
+Equipo / Autor(es): Rodrigo Zarate Fernandez
 
 Curso / Asignatura: Sistemas Embebidos / Microcontroladores
 
-Fecha: DD/MM/AAAA
+Fecha: 1/09/2025
 
 Descripción breve:
 Conjunto de programas que utilizan la Raspberry Pi Pico 2 para manejar entradas digitales (botones) y salidas (LEDs), implementando:
