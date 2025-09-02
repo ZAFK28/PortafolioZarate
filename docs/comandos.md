@@ -121,7 +121,7 @@
 
 ![Diagrama del sistema](recursos/imgs/ibero.jpeg)
 
-<img src="../recursos/imgs/ibero.jpeg" alt="Diagrama del sistema" width="420">
+<img src="../recursos/imgs/ibero.png" alt="Diagrama del sistema" width="420">
 
 ---
 
