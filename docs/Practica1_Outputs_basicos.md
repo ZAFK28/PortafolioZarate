@@ -4,11 +4,11 @@
 
 Nombre del proyecto: Prácticas de LEDs con Raspberry Pi Pico 2
 
-Equipo / Autor(es): Nombre del estudiante / grupo
+Equipo / Autor(es): Rodrigo Zarate Fernandez
 
 Curso / Asignatura: Sistemas Embebidos / Microcontroladores
 
-Fecha: DD/MM/AAAA
+Fecha: 27/08/2025
 
 Descripción breve:
 Conjunto de programas que utilizan la Raspberry Pi Pico 2 para controlar LEDs mediante lógica binaria y máscaras:
@@ -77,9 +77,84 @@ Programación básica en MicroPython.
 ## 5) Desarrollo
 
 ### 5.1  Contador binario de 4 bits
+#### Esquematico
+<img src="../recursos/imgs/4bits.png" alt="Diagrama del sistema" width="420">
+``` codigo
+#include <stdio.h>
+#include "pico/stdlib.h"
+#define A 12
+#define B 13    
+#define C 14
+#define D 15
 
+const uint32_t LED_MASK = (1u << A) | (1u << B) | (1u << C) | (1u << D) ;
+
+
+int main() {
+    stdio_init_all();
+    gpio_init_mask(LED_MASK);
+    gpio_set_dir_out_masked(LED_MASK);
+    gpio_put_masked(LED_MASK, 0);
+
+    while (true) {
+
+        for (uint32_t n = 0; n < 16; n++) {
+            gpio_put_masked(LED_MASK, n<<12);
+            sleep_ms(1000);
+        } 
+       /* gpio_put_masked(LED_MASK, LED_MASK);*/
+    }
+    return 0;
+}
+```
+#### Video
+[Video Selector Ciclico](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
 ---
 ### 5.2 Barrido leds
+#### Esquematico
+<img src="../recursos/imgs/4bits.png" alt="Diagrama del sistema" width="420">
+``` codigo
+#include <stdio.h>
+#include <stdint.h>
+#include "pico/stdlib.h"
 
+#define LED0 0
+#define LED1 1
+#define LED2 2
+#define LED3 3
+#define LED4 4
+
+#define LED_MASK ((1u << LED0) | (1u << LED1) | (1u << LED2) | (1u << LED3) | (1u << LED4))
+
+int main() {
+    stdio_init_all();
+    gpio_init_mask(LED_MASK);
+    gpio_set_dir_out_masked(LED_MASK);
+
+    int pos = 0;
+    int dir = 1; // 1 = derecha, -1 = izquierda
+
+    while (true) {
+        uint32_t value = (1u << pos);
+        gpio_put_masked(LED_MASK, value);
+        sleep_ms(200);
+
+        pos += dir;
+
+        if (pos == 4) dir = -1; // extremo derecho
+        if (pos == 0) dir = 1;  // extremo izquierdo
+    }
+    return 0;
+}
+```
+#### Video
+[Video Selector Ciclico](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
 ---
 ### 5.3 Secuencia en codigo Gray
+#### Esquematico
+<img src="../recursos/imgs/4bits.png" alt="Diagrama del sistema" width="420">
+``` codigo
+
+```
+#### Video
+[Video Selector Ciclico](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
