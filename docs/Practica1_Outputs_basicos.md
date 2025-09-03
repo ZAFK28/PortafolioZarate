@@ -108,6 +108,7 @@ int main() {
 }
 ```
 #### Video
+
 [Video Selector Ciclico](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
 ---
 ### 5.2 Barrido leds
@@ -148,6 +149,7 @@ int main() {
 }
 ```
 #### Video
+
 [Video Selector Ciclico](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
 ---
 ### 5.3 Secuencia en codigo Gray
@@ -198,4 +200,5 @@ int main() {
 
 ```
 #### Video
-[Video Selector Ciclico](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
+
+[Video Codigo Gray](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
