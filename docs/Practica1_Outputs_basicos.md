@@ -154,6 +154,47 @@ int main() {
 #### Esquematico
 <img src="../recursos/imgs/4bits.png" alt="Diagrama del sistema" width="420">
 ``` codigo
+#include <stdio.h>
+#include "pico/stdlib.h"
+
+// Pines de los LEDs
+#define LED0 2
+#define LED1 3
+#define LED2 4
+#define LED3 5
+
+// Arreglo con los LEDs
+int leds[] = {LED0, LED1, LED2, LED3};
+
+// Función para convertir binario a Gray
+int bin_to_gray(int num) {
+    return num ^ (num >> 1);
+}
+
+int main() {
+    stdio_init_all();
+
+    // Inicializar pines como salida
+    for (int i = 0; i < 4; i++) {
+        gpio_init(leds[i]);
+        gpio_set_dir(leds[i], true);
+    }
+
+    while (1) {
+        // Recorrer los 16 estados (4 bits)
+        for (int i = 0; i < 16; i++) {
+            int gray = bin_to_gray(i);
+
+            // Escribir cada bit en los LEDs
+            for (int b = 0; b < 4; b++) {
+                int bit = (gray >> b) & 1;
+                gpio_put(leds[b], bit);
+            }
+
+            sleep_ms(500); // Pausa entre estados
+        }
+    }
+}
 
 ```
 #### Video
