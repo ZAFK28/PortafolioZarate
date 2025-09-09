@@ -109,7 +109,7 @@ int main() {
 ```
 #### Video
 
-[Video Selector Ciclico](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
+[Video Contador 4 bits](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
 ---
 ### 5.2 Barrido leds
 #### Esquematico
@@ -150,7 +150,7 @@ int main() {
 ```
 #### Video
 
-[Video Selector Ciclico](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
+[Video Barrido Leds](https://youtube.com/shorts/twmNGeeP-nU?si=mZBkW5TyqbBxRJ5B)
 ---
 ### 5.3 Secuencia en codigo Gray
 #### Esquematico
