@@ -2,24 +2,37 @@
 ---
 ## 1) Resumen
 Nombre del proyecto: Pong de LEDs con interrupciones
+
 Equipo / Autor(es): Antonio Martínez
+
 Curso / Asignatura: Sistemas Embebidos
+
 Fecha: 01/09/2025
-Descripción breve: Juego de “Pong” unidimensional usando 5 LEDs para la pelota, 2 salidas para puntos y 2 botones con interrupciones para devolver la pelota en los extremos.
+
+Descripción breve: Juego de “Pong” unidimensional usando 5 LEDs para la pelota, 2 salidas para puntos y 2 
+botones con interrupciones para devolver la pelota en los extremos.
 Información del proyecto:
 
 Lenguaje/SDK: C con Raspberry Pi Pico SDK (pico/stdlib.h).
 Técnicas clave: manejo de GPIO, interrupciones por flanco de bajada, pull-ups internos, lógica de estados.
 Plataforma: Raspberry Pi Pico / Pico 2.
 
-Material utilizado
+Material utilizado:
+
 Raspberry Pi Pico (o Pico 2) + cable micro-USB/USB-C
+
 Protoboard
+
 7 LEDs (5 para “cancha”, 2 para puntos J1/J2)
+
 7 resistencias 220–330 Ω (una por LED)
+
 2 botones momentáneos
+
 2 resistencias 1K-2K Ω para los botones
+
 Cables de conexión (jumpers)
+
 PC con VS Code + Pico SDK configurado
 ## 2) Objetivos
 Usar interrupciones GPIO para leer botones con pull-up interno (activo en bajo).
@@ -31,30 +44,37 @@ Botones (activos en bajo):
 - Un terminal del botón a GND; el otro a GPIO 14 (BTN_AVANZA) y GPIO 15 (BTN_RETRO). Se habilita gpio_pull_up(), por lo que al presionar el botón, la línea cae a 0 (flanco de bajada).
 
 LEDs “cancha” (con resistencia a GND):
+
 - LED4 → GPIO 9
+
 - LED0 → GPIO 10
+
 - LED1 → GPIO 11
+
 - LED2 → GPIO 12
+
 - LED3 → GPIO 13
 
 LEDs de “punto” (o zumbadores, según el montaje):
+
 - J1 → GPIO 7 (punto del jugador izquierdo)
+
 - J2 → GPIO 8 (punto del jugador derecho)
 
 Recomendación: conectar ánodo del LED a GPIO mediante resistencia serie y cátodo a GND. Con gpio_put(pin, 1) el LED enciende.
 
 Tabla rápida de pines
 
-Señal	|GPIO	|Uso
-BTN_AVANZA|	14	|Botón jugador izquierdo
-BTN_RETRO	|15|	Botón jugador derecho
-LED4|	9	|Posición 1 (extremo izq)
-LED0|	10|	Posición 2
-LED1	|11|	Posición 3 (centro)
-LED2	|12|	Posición 4
-LED3	|13|	Posición 5 (extremo der)
-J1	|7|	Indicador de punto izq
-J2	|8|	Indicador de punto der
+|Señal	|GPIO	|Uso|
+|BTN_AVANZA|	14	|Botón jugador izquierdo|
+|BTN_RETRO	|15|	Botón jugador derecho|
+|LED4|	9	|Posición 1 (extremo izq)|
+|LED0|	10|	Posición 2|
+|LED1	|11|	Posición 3 (centro)|
+|LED2	|12|	Posición 4|
+|LED3	|13|	Posición 5 (extremo der)|
+|J1	|7|	Indicador de punto izq|
+|J2	|8|	Indicador de punto der|
 ### Esquematico
 <img src="../recursos/imgs/pong.png" alt="Diagrama del sistema" width="420">
 ## 4) Código
