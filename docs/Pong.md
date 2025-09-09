@@ -154,20 +154,24 @@ Botones: BTN_AVANZA=14, BTN_RETRO=15 (entradas con pull-up, activos en bajo).
 LEDs “cancha”: LED4=9, LED0=10, LED1=11, LED2=12, LED3=13.
 Se agrupan en LEDS[5] = { LED4, LED0, LED1, LED2, LED3 }, donde pos=1 corresponde a LEDS[0] (GPIO 9) y pos=5 a LEDS[4] (GPIO 13).
 Indicadores de punto: J1=7 (izquierda), J2=8 (derecha). Se configuran como salidas y se encienden 2 s al anotar.
+---
 b) Variables de estado
 pos ∈ {1,2,3,4,5} indica la posición de la pelota.
 dir ∈ {+1, −1} define la dirección (derecha/izquierda).
 Ju1, Ju2 sirven como flags de lectura (opcionales, el juego funciona sin usarlas).
+---
 c) Interrupción accion()
 Se activa con flanco de bajada (GPIO_IRQ_EDGE_FALL) en cualquiera de los dos botones.
 Lógica de “devolución”:
 Si la pelota está en el extremo izquierdo (pos==1) y cae el botón izquierdo (BTN_AVANZA), se fuerza dir = +1.
 Si está en el extremo derecho (pos==5) y cae el botón derecho (BTN_RETRO), se fuerza dir = −1.
 Se llama a gpio_acknowledge_irq() para limpiar el evento atendido.
+---
 d) Inicialización en main()
 LEDS y PUNTOS se inicializan como salidas y se apagan.
 Botones se configuran como entradas con gpio_pull_up().
 Se registra la ISR con gpio_set_irq_enabled_with_callback() en BTN_AVANZA y se habilita también la IRQ de BTN_RETRO.
+---
 e) Bucle principal
 (Opcional) Actualiza Ju1/Ju2 leyendo el estado instantáneo de los botones.
 Movimiento: pos += dir;
@@ -177,6 +181,7 @@ Izquierda: si pos==0, se encienden todos los LEDs de cancha, se activa J1 por 2 
 (La dirección dir no se reorienta explícitamente tras el punto.)
 Render: se enciende únicamente el LED cuyo índice+1 == pos.
 Velocidad: sleep_ms(250) define la dificultad.
+---
 ## 6) Pruebas y comportamiento esperado
 Arranque: un único LED encendido en la posición 1; la “pelota” avanza hacia la derecha (dir=+1).
 Devolución correcta: al llegar al LED extremo, si el jugador correspondiente presiona a tiempo, la pelota cambia de sentido sin salir.
