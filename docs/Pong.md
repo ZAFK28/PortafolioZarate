@@ -75,7 +75,8 @@ Tabla rápida de pines
 |LED2	    |12        |	Posición 4         |
 |LED3   	|13        |Posición 5(extremo der)|
 |J1      	|7         | Indicador de punto izq|
-|J2	        |8         |Indicador de punto der|
+|J2	        |8         | Indicador de punto der|
+
 ### Esquematico
 <img src="../recursos/imgs/pong.png" alt="Diagrama del sistema" width="420">
 ## 4) Código
