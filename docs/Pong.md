@@ -209,4 +209,4 @@ Arranque: un único LED encendido en la posición 1; la “pelota” avanza haci
 Devolución correcta: al llegar al LED extremo, si el jugador correspondiente presiona a tiempo, la pelota cambia de sentido sin salir.
 Fallo: si nadie presiona y la pelota intenta pasar de 5→6 o 1→0, se marca punto (J2 o J1, respectivamente) y se reinicia en el centro (pos=3).
 ### Video
-[Video Selector Ciclico](https://www.youtube.com/watch?v=2d4McjVFlx8&t=3s)
+[Video Pong](https://www.youtube.com/watch?v=2d4McjVFlx8&t=3s)
