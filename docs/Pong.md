@@ -65,16 +65,17 @@ Recomendación: conectar ánodo del LED a GPIO mediante resistencia serie y cát
 
 Tabla rápida de pines
 
-|Señal	|GPIO	|Uso|
-|BTN_AVANZA|	14	|Botón jugador izquierdo|
-|BTN_RETRO	|15|	Botón jugador derecho|
-|LED4|	9	|Posición 1 (extremo izq)|
-|LED0|	10|	Posición 2|
-|LED1	|11|	Posición 3 (centro)|
-|LED2	|12|	Posición 4|
-|LED3	|13|	Posición 5 (extremo der)|
-|J1	|7|	Indicador de punto izq|
-|J2	|8|	Indicador de punto der|
+|  Señal	|   GPIO   |          Uso          |
+|----------:|:--------:|-----------------------|
+|BTN_AVANZA |	14	   |Botón jugador izquierdo|
+|BTN_RETRO	|15        |  Botón jugador derecho|
+|LED4       |	9	   |Posición 1(extremo izq)|
+|LED0       |	10     |	Posición 2         |
+|LED1    	|11        |	Posición 3 (centro)|
+|LED2	    |12        |	Posición 4         |
+|LED3   	|13        |Posición 5(extremo der)|
+|J1      	|7         | Indicador de punto izq|
+|J2	        |8         |Indicador de punto der|
 ### Esquematico
 <img src="../recursos/imgs/pong.png" alt="Diagrama del sistema" width="420">
 ## 4) Código
