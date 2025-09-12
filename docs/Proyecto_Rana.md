@@ -9,3 +9,10 @@ La limpieza manual de estos espacios resulta complicada y poco eficiente, por lo
 <object data="../recursos/archivos/Prototipo.pdf" type="application/pdf" width="100%" height="600">
   <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/Prototipo.pdf">Descargar</a></p>
 </object>
+
+Analisís sobre la problematica:
+[Descargar especificación (PDF)](recursos/archivos/rana2.pdf)
+
+<object data="../recursos/archivos/rana2.pdf" type="application/pdf" width="100%" height="600">
+  <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/rana2.pdf">Descargar</a></p>
+</object>
