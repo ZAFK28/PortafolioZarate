@@ -1,4 +1,4 @@
-site_name: Documentación Unversitaria
+site_name: Documentación de Rodrigo Zárate
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -29,7 +29,7 @@ theme:
   highlightjs: true 
   palette:
       - scheme: default
-        primary: red
+        primary: black
 
   features:
     - content.code.copy
