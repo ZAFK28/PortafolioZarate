@@ -6,6 +6,6 @@ La limpieza manual de estos espacios resulta complicada y poco eficiente, por lo
 
 [Descargar especificación (PDF)](recursos/archivos/Prototipo.pdf)
 
-<object data="../recursos/archivos/presentacion.pdf" type="application/pdf" width="100%" height="600">
+<object data="../recursos/archivos/Prototipo.pdf" type="application/pdf" width="100%" height="600">
   <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/Prototipo.pdf">Descargar</a></p>
 </object>
