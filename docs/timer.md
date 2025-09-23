@@ -50,10 +50,14 @@ Reagendar desde el deadline previo evita el drift que ocurriría si se usara el 
 
 ## Consideraciones de temporización
 Rollover 32 bit: timerawl/nextX_us envuelven cada ≈ 71.58 min (2^32 µs). El esquema por deadlines lo maneja bien si todo se mantiene en 32 bits.
+
 SIO toggle: Requiere GPIO en función SIO (por defecto tras gpio_init()). Es atómico y rápido.
+
 ISRs ligeras: Evita trabajo pesado dentro de interrupciones.
-Errores comunes y correcciones
-Programación de alarmas 2 y 3 (índices equivocados): ```c // Incorrecto (sobrescribe 0 y 1): timer_hw->alarm[ALARM0_NUM] = next0_us; timer_hw->alarm[ALARM1_NUM] = next1_us; timer_hw->alarm[ALARM0_NUM] = next2_us; // ← Debe ser ALARM2_NUM timer_hw->alarm[ALARM1_NUM] = next3_us; // ← Debe ser ALARM3_NUM // Correcto: timer_hw->alarm[ALARM0_NUM] = next0_us; timer_hw->alarm[ALARM1_NUM] = next1_us; timer_hw->alarm[ALARM2_NUM] = next2_us; timer_hw->alarm[ALARM3_NUM] = next3_us;
+
+### Errores comunes y correcciones
+Programación de alarmas 2 y 3 (índices equivocados): 
+```c // Incorrecto (sobrescribe 0 y 1): timer_hw->alarm[ALARM0_NUM] = next0_us; timer_hw->alarm[ALARM1_NUM] = next1_us; timer_hw->alarm[ALARM0_NUM] = next2_us; // ← Debe ser ALARM2_NUM timer_hw->alarm[ALARM1_NUM] = next3_us; // ← Debe ser ALARM3_NUM // Correcto: timer_hw->alarm[ALARM0_NUM] = next0_us; timer_hw->alarm[ALARM1_NUM] = next1_us; timer_hw->alarm[ALARM2_NUM] = next2_us; timer_hw->alarm[ALARM3_NUM] = next3_us;
 
 // Dos/4 LEDs con múltiples alarmas del timer de sistema (RP2350 / Pico 2) en µs. // Cada ALARMx controla un LED distinto. Ajusta INTERVALO*_US para la velocidad.
 ``` codigo
