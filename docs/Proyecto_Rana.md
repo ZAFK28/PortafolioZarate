@@ -16,3 +16,10 @@ Analisís sobre la problematica:
 <object data="../recursos/archivos/rana2.pdf" type="application/pdf" width="100%" height="600">
   <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/rana2.pdf">Descargar</a></p>
 </object>
+
+Marco real ganar vale la pena:
+[Descargar especificación (PDF)](MRGVP.pdf)
+
+<object data="../recursos/archivos/MRGVP.pdf" type="application/pdf" width="100%" height="600">
+  <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/MRGVP.pdf">Descargar</a></p>
+</object>
