@@ -18,8 +18,9 @@ Analisís sobre la problematica:
 </object>
 
 Marco real ganar vale la pena:
+
 [Descargar especificación (PDF)](MRGVP.pdf)
 
-<object data="../recursos/archivos/MRGVP.pdf" type="application/pdf" width="100%" height="600">
+<object data="../recursos/archivos/MRGVP.pdf" type="application/pdf" width="60%" height="400">
   <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/MRGVP.pdf">Descargar</a></p>
 </object>
