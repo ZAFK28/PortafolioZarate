@@ -3,7 +3,7 @@
 ## 1) Resumen
 Nombre del proyecto: Pong de LEDs con interrupciones
 
-Equipo / Autor(es): Antonio Martínez
+Equipo / Autor(es): Rodrigo Zarate Fernandez
 
 Curso / Asignatura: Sistemas Embebidos
 

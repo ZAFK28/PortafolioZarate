@@ -49,7 +49,10 @@ nav:
           - Pong: Pong.md
           - Temporizadores: timer.md
           - Simon dice: SimonDice.md
-          - 
+          - PWM:
+            - Motor DC: pwm_motor.md
+            - Buzzer: control_pwm.md
+            - Onda Senoidal: seno_pwm.md
       - Proyectos 4:
         - Proyecto RANA: Proyecto_Rana.md
-        - Cafetera: Cafetera.md
+        - cafetera: Cafetera.md
