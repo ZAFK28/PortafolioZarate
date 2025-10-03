@@ -61,3 +61,17 @@ Hipótesis H3: Prefieren suscripción (opex) sobre compra (capex).
 •	Compra + SLA: $XX,XXX USD unidad + $XXX USD/mes (software, datos, soporte).
 
 •	Piloto 4 semanas: tarifa plana de validación con resultados garantizados (m² y kg objetivo).
+
+# Creando Valor — RANA (Robot Acuático de Navegación Asistida)
+
+| *INSIGHTFUL* (Necesidades reales) | *UNIQUE* (Difícil de replicar) | *TARGETED* (Cliente apasionado) |
+|---|---|---|
+| Limpieza *frecuente y segura* de lagos/canales urbanos. | *Navegación asistida: rumbo estable, retorno seguro y **anticolisión. | **Municipios/organismos de agua* con presión por quejas vecinales. |
+| *Datos verificables* para justificar presupuesto (kg, m², turbidez). | Operación *data-first* con reportes automáticos y *mapas de calor* de basura. | *Direcciones de Parques/Servicios Públicos* responsables de imagen y sanidad. |
+| Respuesta *rápida post-lluvias* y en temporadas altas de residuos. | *Arquitectura modular* (skimmer, sensores, micro-dragado) según sitio. | *Marinas/hoteles* que cuidan la experiencia visual del visitante. |
+| Servicio integral: *recolección + disposición* y *mantenimiento* con OPEX bajo. | *Pilotos en 1 semana* (despliegue ágil) + *panel web/API* para gestión y trazabilidad. | *Universidades/labs ambientales* que requieren campañas de monitoreo con evidencia. |
+
+---
+
+## VALUE PROPOSITION
+*RANA mantiene limpios los cuerpos de agua con navegación asistida y entrega evidencia medible (kg recolectados, m² cubiertos, turbidez) para reducir quejas y **justificar presupuesto* con datos.**
