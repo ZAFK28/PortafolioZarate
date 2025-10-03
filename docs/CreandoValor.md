@@ -48,6 +48,3 @@ o	Telemetría en app web: m² barridos, kg estimados (celdas de carga o conteo p
 | Servicio integral: *recolección + disposición* y *mantenimiento* con OPEX bajo. | *Pilotos en 1 semana* (despliegue ágil) + *panel web/API* para gestión y trazabilidad. | *Universidades/labs ambientales* que requieren campañas de monitoreo con evidencia. |
 
 ---
-
-## VALUE PROPOSITION
-*RANA mantiene limpios los cuerpos de agua con navegación asistida y entrega evidencia medible (kg recolectados, m² cubiertos, turbidez) para reducir quejas y **justificar presupuesto* con datos.**
