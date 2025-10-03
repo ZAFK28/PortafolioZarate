@@ -13,7 +13,7 @@ Segmentos objetivo (targeted)
 2.	Administradores de parques y clubs náuticos (imagen pública, seguridad sanitaria).
 3.	Hoteles y marinas privadas (experiencia del visitante).
 4.	Universidades/labs ambientales (datos y campo).
-## 2) Propuesta de valor (INSIGHTFUL • UNIQUE • TARGETED)
+## 2) Propuesta de valor
 •	Dolores reales: limpieza manual costosa e intermitente; quejas vecinales por mal olor/algas; falta de datos verificables para justificar presupuesto.
 
 •	Ganancias: limpieza más frecuente y segura, evidencia cuantificada para reportes y decisiones, operación silenciosa y con bajo OPEX.
@@ -37,30 +37,6 @@ o	Ayudas de navegación: estabilización de rumbo, “retorno seguro”, frenado
 o	Skimmer + canastilla medible (hasta 20–30 kg/día).
 
 o	Telemetría en app web: m² barridos, kg estimados (celdas de carga o conteo por volumen), turbidez, ruta GPS simple.
-## 4) Historia (antecedentes) para presentar
-“En Puebla y CDMX, lagos urbanos acumulan sólidos flotantes tras lluvias. Hoy se limpia ‘cuando se puede’, sin métricas, y los vecinos perciben abandono. RANA permite jornadas cortas pero frecuentes, seguras y medibles. Un operario puede cubrir rutas asistidas, recolectar residuos y entregar un reporte automático con evidencia, reduciendo quejas y mejorando la calidad visual del agua.”
-## 5) Hipótesis, evidencias y métricas
-Hipótesis H1: Los tomadores de decisión valoran más la limpieza cuando viene con reportes verificables.
-•	Evidencia: ¿Descargan y comparten el PDF? ¿Lo anexan a oficios?
-•	Métricas: ≥80% de demos solicitan el reporte; ≥50% lo usan en una reunión.
-Hipótesis H2: La navegación asistida reduce curva de aprendizaje y aumenta m²/h frente a teleoperación “cruda”.
-•	Evidencia: prueba A/B con y sin ayudas.
-•	Métricas: +25% m²/h, −30% incidentes de toques a muelle/boya.
-Hipótesis H3: Prefieren suscripción (opex) sobre compra (capex).
-•	Evidencia: intención de pago en entrevistas cotizadas.
-•	Métricas: ≥60% piden modalidad mensual (incl. mantenimiento y retiro).
-## 6) Prototipo inicial (cómo probar HOY)
-•	Wizard-of-Oz: casco RC + microcontrolador con “freno por proximidad” y asistente de rumbo; UI web fake-first con rutas y mapa.
-
-•	Prueba en campo controlado (laguna/estanque con autoridad): 2 horas, 3 micro-rutas, conteo de kg y m².
-
-•	Entregable: Reporte 1-página con: antes/después (fotos georreferenciadas), kg/m²/h, turbidez inicial/final, heatmap simple de acumulación.
-## 7) Precio (borrador para conversación, no definitivo)
-•	Suscripción Pro: $X,XXX USD/mes por unidad (incluye 2 jornadas/semana, mantenimiento, reportes).
-
-•	Compra + SLA: $XX,XXX USD unidad + $XXX USD/mes (software, datos, soporte).
-
-•	Piloto 4 semanas: tarifa plana de validación con resultados garantizados (m² y kg objetivo).
 
 # Creando Valor — RANA (Robot Acuático de Navegación Asistida)
 
