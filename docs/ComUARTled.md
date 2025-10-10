@@ -180,7 +180,7 @@ int main() {
 
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
   <iframe
-    src="https://www.youtube.com/watch?v=mNmajwbFeJI"
+    src="https://youtu.be/mNmajwbFeJI?si=hKylJSvT9iahGPBU"
     title="YouTube video"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
