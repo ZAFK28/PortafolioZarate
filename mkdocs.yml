@@ -54,6 +54,7 @@ nav:
             - Buzzer: control_pwm.md
             - Onda Senoidal: seno_pwm.md
           - UART Led: ComUARTled.md
+          - Examen 2: Examen2.md
       - Proyectos 4:
         - Proyecto RANA: Proyecto_Rana.md
         - cafetera: Cafetera.md
