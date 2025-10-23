@@ -364,7 +364,7 @@ Cada modo imprime en consola su nombre al activarse:
 ## 6) Video de demostracion
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
   <iframe
-    src="https://youtube.com/shorts/-4OjMs1xZ-A?si=csxRci8DGUVf86gB"
+    src="https://www.youtube.com/embed/-4OjMs1xZ-A?rel=0&modestbranding=1&playsinline=1"
     title="YouTube Short"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
