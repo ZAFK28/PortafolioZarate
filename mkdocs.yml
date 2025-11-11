@@ -56,6 +56,10 @@ nav:
           - UART Led: ComUARTled.md
           - UART Led 2: Uart_LEDS.md
           - Examen 2: Examen2.md
+          - ADC:
+            - ADC Luxometro: ADC_lux.md
+            - ADC Servomotor: ADC_servo.md
+          - I2C: Comunicacion_I2C.md
       - Proyectos 4:
         - Proyecto RANA: Proyecto_Rana.md
         - cafetera: Cafetera.md
