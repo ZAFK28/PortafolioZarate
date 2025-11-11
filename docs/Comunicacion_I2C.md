@@ -214,4 +214,4 @@ int main(void) {
   - X ≈ 0 g  
   - Y ≈ 0 g  
   - Z ≈ 1 g  
-<img src="../recursos/imgs/SimI2C.png" alt="Diagrama del sistema" width="420">
+<img src="../recursos/imgs/SimI2C.png" alt="Diagrama del sistema" width="540">
