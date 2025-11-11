@@ -133,15 +133,11 @@ int main() {
 - Los valores se actualizan de forma continua y estable, filtrados con la media móvil.  
 
 **Ejemplo de salida en terminal:**
-
+```
 Muestra: 1800
-
 Suma: 28800
-
 N_muestras: 16
-
 Promedio: 1800
-
 Porcentaje: 21%
-
+```
 **Resultado esperado:** medición estable de iluminación ambiental con respuesta proporcional a la cantidad de luz recibida por el sensor.
