@@ -79,7 +79,9 @@ Tabla rápida de pines
 
 ### Esquematico
 <img src="../recursos/imgs/pong.png" alt="Diagrama del sistema" width="420">
+
 ## 4) Código
+
 ``` codigo
 #include "pico/stdlib.h"
 #include <stdbool.h>

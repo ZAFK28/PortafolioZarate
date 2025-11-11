@@ -24,7 +24,7 @@
 ## 2) Objetivos
 
 - Configurar **dos puertos I2C** del Raspberry Pi Pico (`i2c0` e `i2c1`).  
-- Leer la **hora (hh:mm:ss)** desde el módulo de reloj **DS1307**.  
+- Leer la **hora** desde el módulo de reloj **DS1307**.  
 - Leer la **aceleración en X, Y y Z** desde el sensor **MPU6050**.  
 - Convertir datos en formato **BCD** a decimal para el reloj.  
 - Convertir datos crudos del acelerómetro a unidades de **g**.  
@@ -44,6 +44,9 @@
 - Conectar **VCC del DS1307 y MPU6050 a 3.3V o 5V** (según el módulo, muchos traen regulador).  
 - Conectar **GND común** entre Pico, DS1307 y MPU6050.  
 - En muchos módulos ya vienen resistencias pull-up en SDA/SCL; si no, usar resistencias de 4.7 kΩ a 3.3 V.  
+
+### Esquematico
+<img src="../recursos/imgs/EsqI2C.png" alt="Diagrama del sistema" width="420">
 
 ---
 
@@ -198,7 +201,7 @@ int main(void) {
 
 ---
 
-## 6) Resultados esperados
+## 6) Resultados
 
 - En la consola serie aparecerán líneas como las siguientes:
   ```
@@ -211,4 +214,4 @@ int main(void) {
   - X ≈ 0 g  
   - Y ≈ 0 g  
   - Z ≈ 1 g  
-- **Resultado esperado:** comunicación I2C estable y simultánea con dos sensores distintos, obteniendo tanto la hora como los datos de aceleración en tiempo real.
+<img src="../recursos/imgs/SimI2C.png" alt="Diagrama del sistema" width="420">
