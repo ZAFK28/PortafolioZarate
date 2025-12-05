@@ -33,3 +33,11 @@ Marco real ganar vale la pena:
 <object data="../recursos/archivos/MRGVP.pdf" type="application/pdf" width="100%" height="600">
   <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/MRGVP.pdf">Descargar</a></p>
 </object>
+
+Presentacion Shark Tank:
+
+[Descargar especificación (PDF)](Presentacion_Rana.pdf)
+
+<object data="../recursos/archivos/Presentacion_Rana.pdf" type="application/pdf" width="100%" height="600">
+  <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/Presentacion_Rana.pdf">Descargar</a></p>
+</object>
