@@ -10,7 +10,7 @@ La limpieza manual de estos espacios resulta complicada y poco eficiente, por lo
   <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/Prototipo.pdf">Descargar</a></p>
 </object>
 
-Analisís sobre la problematica:
+### Analisís sobre la problematica:
 
 [Descargar especificación (PDF)](recursos/archivos/rana2.pdf)
 
@@ -18,7 +18,7 @@ Analisís sobre la problematica:
   <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/rana2.pdf">Descargar</a></p>
 </object>
 
-Diagrama de Gantt:
+### Diagrama de Gantt:
 
 [Descargar especificación (PDF)](RANAGANTT.pdf)
 
@@ -26,7 +26,7 @@ Diagrama de Gantt:
   <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/RANAGANTT.pdf">Descargar</a></p>
 </object>
 
-Marco real ganar vale la pena:
+### Marco real ganar vale la pena:
 
 [Descargar especificación (PDF)](MRGVP.pdf)
 
@@ -34,7 +34,7 @@ Marco real ganar vale la pena:
   <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/MRGVP.pdf">Descargar</a></p>
 </object>
 
-Presentacion Shark Tank:
+### Presentacion Shark Tank:
 
 [Descargar especificación (PDF)](Presentacion_Rana.pdf)
 
