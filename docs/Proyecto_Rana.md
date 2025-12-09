@@ -41,3 +41,11 @@ La limpieza manual de estos espacios resulta complicada y poco eficiente, por lo
 <object data="../recursos/archivos/Presentacion_Rana.pdf" type="application/pdf" width="100%" height="600">
   <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/Presentacion_Rana.pdf">Descargar</a></p>
 </object>
+
+### Documento proyecto final:
+
+[Descargar especificación (PDF)](Entrega Final proyectos 4 (RANA).pdf)
+
+<object data="../recursos/archivos/DocFinal.pdf" type="application/pdf" width="100%" height="600">
+  <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/DocFinal.pdf">Descargar</a></p>
+</object>
